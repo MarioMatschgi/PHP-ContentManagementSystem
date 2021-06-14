@@ -1,0 +1,37 @@
+.langsel {
+  /* display: inline-block; */
+  float: left;
+  margin-right: 1em;
+}
+.langsel ul p {
+  margin: 0;
+  padding: 0;
+}
+
+.langsel ul {
+  position: absolute;
+  list-style-type: none;
+  margin: 0;
+  
+  font-size: 0;
+  
+  z-index: 9999;
+  
+  border-top-left-radius: 0;
+  
+  transition: all .5s;
+}
+.langsel:hover ul, .langsel:active ul {
+  font-size: 1em;
+}
+.langsel ul li {
+  cursor: pointer;
+}
+.langsel span {
+  margin-left: .5em;
+  vertical-align: middle;
+}
+.langsel img {
+  height: 1em;
+  vertical-align: middle;
+}

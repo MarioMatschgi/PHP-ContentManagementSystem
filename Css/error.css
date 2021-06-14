@@ -1,0 +1,9 @@
+.error {
+  text-align: center;
+}
+.error h1 {
+  font-size: 4em;
+}
+.error p {
+  font-size: 1em;
+}

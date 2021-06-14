@@ -1,0 +1,74 @@
+.title {
+  margin-top: 10vh;
+}
+.title h1 {
+  font-size: 3rem;
+  margin-bottom: 0;
+}
+.title h2 {
+  font-size: 4rem;
+  margin-top: var(--margin-p);
+  margin-bottom: .5em;
+}
+.title {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--font-headline-color);
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+h3, h4 {
+  margin-top: var(--margin-h);
+  margin-bottom: 0;
+  
+  /* text-decoration: underline var(--font-color); */
+}
+
+/* h4 {
+  margin: 0;
+  margin-top: var(--margin-p);
+} */
+
+p {
+  margin: 0;
+  margin-top: var(--margin-p);
+  line-height: 1.4em;
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+  /* transition: .5s; */
+}
+a:hover {
+  
+}
+/* h4 a {
+  color: var(--font-headline-color);
+} */
+h3 a:first-child, h4 a:first-child {
+  color: var(--font-headline-color);
+  text-decoration: none;
+  /* text-decoration-color: var(--font-color); */
+}
+h3 i, h4 i {
+  font-size: .75em;
+  margin-left: .5em;
+}
+
+ul br {
+  font-size: .5em;
+}
+
+::selection {
+  color: var(--selection-color);
+}
+pre::selection, code::selection, code>span::selection {
+  color: var(--font-color);
+}

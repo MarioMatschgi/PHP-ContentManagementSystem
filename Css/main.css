@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root {
+  --colors-red: #eb4d4b;
+  --colors-light-blue: #2b99b1;
+  --colors-turquise: lightseagreen;
+  --colors-black: #1d1d1d;
+  --colors-dark-gray: #29272a;
+  --colors-light-gray: #b0b0b0;
+  --colors-white: #e6e6e6;
+  
+  --background-color: var(--colors-black);
+  --background-box-color: var(--colors-dark-gray); /* Background color of bg-image */
+  --font-color: var(--colors-light-gray);
+  --font-headline-color: var(--colors-white);
+  --accent-color: var(--colors-light-blue);
+  --selection-color: var(--colors-turquise);
+  
+  --margin-h: 2rem;
+  --margin-p: .5rem;
+  --margin-inset: 1em;
+  
+  --padding-p: 1.5em;
+  
+  --radius-box: 1em;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+  
+  font-size: 1.5rem;
+  /* Smaller EM: Small on small | Larger VMIN: large on large */
+  font-size: calc(0.75em + 1.2vmin); /* https://bits.theorem.co/css-pro-tips-responsive-font-sizes-and-when-to-use-which-units/ */
+  
+  color: var(--font-color);  /* Highlight #08fdd8 */
+  
+  background-color: #1d1d1d;
+  background-image: url("../Images/Background.svg");
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  
+  font-family: 'Roboto', sans-serif;
+  
+  min-height: 100vh;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+.debug {
+  color: red !important;
+}
+
+.content, .header, .title {
+  margin: 2em 4rem 0 4rem;
+}
+@media only screen and (max-width: 40em) {
+	.content, .header {
+	  margin: 2em 1rem 0 1rem;
+	}
+}
+.header {
+  margin-top: 0;
+  padding-top: 2em;
+}
+
+ul.fa-ul li span {
+  color: var(--accent-color);
+  font-size: .7em;
+}
+ul.fa-ul li {
+  line-height: 1.5em;
+}
+
+.box {
+  margin-top: var(--margin-p);
+  padding: var(--padding-p);
+  
+  border-radius: var(--radius-box);
+  background: var(--background-box-color);
+  
+  /* transition: .2s ease-in-out; */
+}
+.box :first-child {
+  margin-top: 0;
+}
+.box :last-child {
+  margin-bottom: 0;
+}
+/* .box:hover:not(.footer) {
+  transform: scale(1.005);
+} */
+
+.inline * {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.table-of-content ul {
+  margin-top: var(--margin-p);
+  margin-left: 1.2em;
+}
+
+.inset {
+  margin-left: var(--margin-inset);
+  margin-right: var(--margin-inset);
+}
+
+.inset-children > * {
+  margin-left: var(--margin-inset);
+  margin-right: var(--margin-inset);
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+button.no-style, input[type="submit"].no-style, input[type="reset"].no-style {
+	background: none;
+	color: inherit;
+	border: none;
+  padding: 0;
+  margin: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}

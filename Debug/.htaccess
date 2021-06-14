@@ -1,0 +1,5 @@
+AuthType Basic
+AuthName "Programario Debug"
+AuthUserFile /usr/www/users/noweba/insider/.htpasswd
+AuthUserFile /usr/www/users/noweba/mario/.htpasswd
+Require valid-user

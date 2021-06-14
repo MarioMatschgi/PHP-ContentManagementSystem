@@ -1,0 +1,100 @@
+/* SRC: https://codepen.io/srirachachacha/pen/pNyQoY */
+
+/* 
+
+  VARIABLES
+  
+*/
+:root {
+  --thickness: .1em;
+  --border-radius: 9999em;
+  --color: var(--font-color);
+  --hover-color: var(--font-color);
+  --transition: .3s ease;
+  
+  --base-yOff: 110%;
+  --base-width: 40%;
+  
+  --final-width: 90%;
+}
+
+/* 
+
+  BASIC STYLES
+  
+*/
+.custom-underline {
+  position: relative;
+}
+
+.custom-underline, .custom-underline:hover, .custom-underline:focus, .custom-underline:active {
+  text-decoration: none;
+}
+
+.custom-underline::after {
+  content: "";
+  position: absolute;
+}
+
+/* 
+
+  HOVER EFFECTS
+  
+*/
+/*--- Left to right ---*/
+.hover-effect-leftright .custom-underline::after {
+  top: var(--base-yOff);
+  height: var(--thickness);
+  width: var(--base-width);
+  
+  left: calc( (100% - var(--final-width)) / 2);
+  
+  border-radius: var(--border-radius);
+  background-color: var(--color);
+  transition: var(--transition);
+}
+.hover-effect-leftright:hover .custom-underline::after {
+  width: var(--final-width);
+  background-color: var(--color);
+  
+  transition: var(--transition);
+}
+
+/*--- Stretching line ---*/
+.hover-effect-stretch .custom-underline::after {
+  top: var(--base-yOff);
+  height: var(--thickness) !important;
+  width: var(--base-width);
+  
+  left: calc(50% - var(--base-width) / 2);
+  right: calc(50% - var(--base-width) / 2);
+  
+  border-radius: var(--border-radius);
+  background-color: var(--color);
+  transition: var(--transition);
+}
+.hover-effect-stretch:hover .custom-underline::after {
+  width: var(--final-width);
+  left: calc(50% - var(--final-width) / 2);
+  right: calc(50% - var(--final-width) / 2);
+  
+  transition: var(--transition);
+}
+
+/*--- Right to left ---*/
+.hover-effect-rightleft .custom-underline::after {
+  top: var(--base-yOff);
+  height: var(--thickness);
+  width: var(--base-width);
+  
+  right: calc( (100% - var(--final-width)) / 2);
+  
+  border-radius: var(--border-radius);
+  background-color: var(--color);
+  transition: var(--transition);
+}
+.hover-effect-rightleft:hover .custom-underline::after {
+  width: var(--final-width);
+  
+  transition: var(--transition);
+}

@@ -1,0 +1,67 @@
+:root {
+  --colors-github: #7e47a5;
+  --colors-discord: #7289DA;
+  --colors-stackoverflow: #ED7C22;
+  --colors-email: #ED7C22;
+  --colors-reddit: #FF4501;
+  --colors-twitter: #1CA1F2;
+  --colors-instagram: #E96C35;
+}
+.spacer {
+  flex: 1;
+}
+.footer {
+  padding: var(--padding-p);
+  
+  border-radius: var(--radius-box) var(--radius-box) 0 0;
+  
+  margin-top: var(--padding-p);
+}
+
+.copyright {
+  width: 100%;
+  margin-top: var(--padding-p);
+  text-align: center;
+}
+.copyright i/* , .copyright i::selection */ {
+  color: var(--colors-red);
+}
+
+.footer .grid {
+  align-items: flex-start;
+  justify-content: center;
+}
+.footer .grid .column {
+  font-size: 2em;
+  text-align: center;
+  padding: 0;
+  flex-grow: 0;
+}
+.footer .grid .column a > i {
+  transition: .3s ease;
+}
+.footer .grid .column a:hover > i{
+  transform: scale(1.05);
+  filter: saturate(1);
+}
+
+
+/* COLORS FOR ICONS */
+.github {
+  color: var(--colors-github);
+}
+.discord {
+  color: var(--colors-discord);
+}
+.stackoverflow {
+  color: var(--colors-stackoverflow);
+}
+.reddit {
+  color: var(--colors-reddit);
+}
+.twitter {
+  color: var(--colors-twitter);
+}
+.instagram {
+  color: var(--colors-instagram);
+}
